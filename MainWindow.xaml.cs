@@ -45,12 +45,14 @@ namespace PathBasedAnimation
 			rcNégyzet.SetValue(Canvas.TopProperty, pfÚtvonal.StartPoint.Y);
 			// A sprirált definiáló objektum létrehozása.
 			
-			var asSpirál = new ArhimédesziSpirál(pfÚtvonal.StartPoint.X, pfÚtvonal.StartPoint.Y,
+			var asSpirál = new ArhimédesziSpirál(pfÚtvonal.StartPoint.X, 
+				pfÚtvonal.StartPoint.Y,
 				10, 0, 1080, 5);
 			// A spirált meghatározó pontok lekérdezése (egy List<Point> objektum)+
 			// A meghatározó pontokat egy egy egyenessel kösse össze az útvonal.
 			PolyLineSegment plsVonal =
-				new PolyLineSegment((System.Collections.Generic.IEnumerable<Point>)asSpirál.Pontok, true);
+				new PolyLineSegment(
+					(System.Collections.Generic.IEnumerable<Point>)asSpirál.Pontok, true);
 			// Szegmens hozzáadása az útvonalalakhoz.
 			pfÚtvonal.Segments.Add(plsVonal);
 			// Útvonalalak hozzáadása a geometriához.
