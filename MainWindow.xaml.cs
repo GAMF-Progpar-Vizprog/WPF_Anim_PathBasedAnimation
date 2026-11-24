@@ -6,7 +6,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
 
-namespace PathBasedAnimation
+namespace WPF_Anim_PathBasedAnimation
 {
 	/// Példaprogram C# kódból megvalósított útvonalkövető animációra.
 	/// Egy négyzetet mozgatunk úgy, hogy a bal felső sarok kövessen
